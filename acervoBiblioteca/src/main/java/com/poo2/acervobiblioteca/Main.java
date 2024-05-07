@@ -25,7 +25,7 @@ public class Main {
         //item.imprimeFichaTecnica();
 
         TCC tcc =new TCC();
-        tcc.setAno(2015);
+        /*tcc.setAno(2015);
         tcc.setAutor("Daniel");
         tcc.setCurso("Eng Comp");
         tcc.setTipo(TipoTCC.MONOGRAFIA);
@@ -37,8 +37,9 @@ public class Main {
         tcc.addTags("Monografia");
         tcc.addTags("Engenharia");
         tcc.addTags("Técnologia");
+        */
+        tcc.cadastra();
         tcc.imprimeFichaTecnica();
-
 
     }
 }

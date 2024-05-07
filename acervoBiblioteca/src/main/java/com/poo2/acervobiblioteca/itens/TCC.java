@@ -106,12 +106,12 @@ public class TCC extends Item {
         } while (i>3 || i<1);
 
         String tag = "";
-        while (tag != "sair"){
+        do{
             System.out.println("Insira uma tag (Ou digite 'sair' para encerrar)");
-            tag = scanner.next();
-            if (tag != "sair"){
+            tag = scanner.nextLine();
+            if (!tag.equals("sair")){
                 this.addTags(tag);
             }
-        }
+        }while (!tag.equals("sair"));
         }
 }
