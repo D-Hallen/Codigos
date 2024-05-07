@@ -1,6 +1,7 @@
 package com.poo2.acervobiblioteca.itens;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Item {
     protected String nome;
@@ -60,5 +61,13 @@ public class Item {
             System.out.print(tag + " - ");
         }
         System.out.println();
+    }
+
+    public void cadastra(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Insira o nome:");
+        this.nome = scanner.nextLine();
+        System.out.println("Qual a quantidade?");
+        this.qtd = scanner.nextInt();
     }
 }
