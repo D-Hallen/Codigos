@@ -13,12 +13,14 @@ import com.poo2.acervobiblioteca.itens.Item;
 public class AcervoBiblioteca {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+
         Item item = new Item();
         item.setNome("ABC");
         item.setEmprestado(true);
         item.setQtd(3);
         item.addTags("Mistério");
+        item.addTags("Suspense");
         item.imprimeFichaTecnica();
+
     }
 }

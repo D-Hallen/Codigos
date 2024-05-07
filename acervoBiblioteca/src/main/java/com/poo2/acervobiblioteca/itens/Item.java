@@ -55,7 +55,7 @@ public class Item {
     }
 
     public void imprimeFichaTecnica(){
-        System.out.printf("Nome: %s\n ID: %d\n Quantidade: %d\nTags: ", this.nome, this.id, this.qtd);
+        System.out.printf("Nome: %s\nID: %d\nQuantidade: %d\nTags: ", this.nome, this.id, this.qtd);
         for (String tag : this.tags) {
             System.out.print(tag + " - ");
         }
