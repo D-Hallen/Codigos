@@ -70,4 +70,16 @@ public class Item {
         System.out.println("Qual a quantidade?");
         this.qtd = scanner.nextInt();
     }
+
+    protected void cadastraTags(){
+        String tag = "";
+        Scanner scanner= new Scanner(System.in);
+        do{
+            System.out.println("Insira uma tag (Ou digite 'sair' para encerrar)");
+            tag = scanner.nextLine();
+            if (!tag.equals("sair")){
+                this.addTags(tag);
+            }
+        }while (!tag.equals("sair"));
+    }
 }

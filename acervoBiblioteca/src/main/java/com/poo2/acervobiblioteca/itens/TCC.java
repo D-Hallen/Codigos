@@ -2,6 +2,7 @@ package com.poo2.acervobiblioteca.itens;
 
 import com.poo2.acervobiblioteca.enums.TipoTCC;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TCC extends Item {
@@ -62,10 +63,12 @@ public class TCC extends Item {
 
     @Override
     public void imprimeFichaTecnica() {
+        System.out.println("TCC:");
         super.imprimeFichaTecnica();
         System.out.printf("Autor: %s\nUniversidade: %s \nCurso: %s \nano: %d \nLocal: %s \nTipo: %s",
                 this.autor, this.universidade, this.curso, this.ano, this.local, this.tipo.toString().toLowerCase());
         System.out.println();
+        System.out.println("============================================================================");
     }
 
     @Override
@@ -104,14 +107,9 @@ public class TCC extends Item {
                     break;
             }
         } while (i>3 || i<1);
+        cadastraTags();
 
-        String tag = "";
-        do{
-            System.out.println("Insira uma tag (Ou digite 'sair' para encerrar)");
-            tag = scanner.nextLine();
-            if (!tag.equals("sair")){
-                this.addTags(tag);
-            }
-        }while (!tag.equals("sair"));
         }
+
+
 }
